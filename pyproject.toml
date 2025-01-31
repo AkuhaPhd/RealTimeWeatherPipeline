@@ -1,0 +1,18 @@
+[project]
+name = "real_time_weather_pipeline"
+version = "0.1.0"
+description = "A scalable data pipeline that ingests real-time weather data from multiple sources, processes it, and stores it in a data warehouse. Use the data to train a machine learning model to predict extreme weather events (e.g., hurricanes, floods, or heatwaves). The pipeline should include data validation, transformation, and visualization components."
+authors = [
+    {name = "akuha.dev@gmail.com"}
+]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "confluent-kafka (>=2.8.0,<3.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
