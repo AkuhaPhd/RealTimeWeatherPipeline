@@ -99,7 +99,7 @@ if __name__ == "__main__":
     AQICN_API_URL = "https://api.waqi.info/feed/"
     AQICN_API_TOKEN = "your_aqicn_api_token"
     OPENWEATHERMAP_API_URL = "https://api.openweathermap.org/data/2.5/weather"
-    OPENWEATHERMAP_API_KEY = "1436ff089b74fbe028f84ae9d8631c90"
+    OPENWEATHERMAP_API_KEY = ""
 
     # Initialize producer components
     producer_service = KafkaProducerService(KAFKA_BOOTSTRAP_SERVERS)
@@ -109,6 +109,3 @@ if __name__ == "__main__":
     # Start the producer pipeline
     producer_pipeline = RealTimeProducerPipeline(CITY, producer_service, air_quality_client, weather_client)
     producer_pipeline.run(AIR_QUALITY_TOPIC, WEATHER_TOPIC)
-
-# OPENWEATHERMAP_API_URL = "https://api.openweathermap.org/data/2.5/weather"
-# OPENWEATHERMAP_API_KEY = "1436ff089b74fbe028f84ae9d8631c90"
